@@ -8,3 +8,4 @@ images:
     newTag: dev-24f817d7ab7a9a6165633aa07250b20f4c3b278a
   - name: ghcr.io/T1kcan/result
     newTag: dev-24f817d7ab7a9a6165633aa07250b20f4c3b278a
+
