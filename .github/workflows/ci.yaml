@@ -3,7 +3,6 @@ name: CI - Voting App Dev
 on:
   push:
     branches:
-      - master
       - dev
 
 jobs:
