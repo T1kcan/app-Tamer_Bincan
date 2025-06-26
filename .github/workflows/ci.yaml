@@ -6,6 +6,18 @@ on:
       - master
 
 jobs:
+
+env:
+  VAR_UPPERCASE: "HELLO"
+
+jobs:
+  MyJob:
+    steps:
+    - name: Convert to lowercase
+      id: convert2lowercase
+      run: INPUT=${{ github.repository_owner }}; echo "VAR_LOWERCASE=${INPUT,,}">>${GITHUB_OUTPUT}
+    - run: echo ${{steps.convert2lowercase.outputs.VAR_LOWERCASE}}
+
   build-push:
     runs-on: ubuntu-latest
     env:
