@@ -6,8 +6,8 @@ on:
       - master
       - dev
 
-  jobs:
-  build-push:
+jobs:
+  push-images:
     name: Build and Push Docker Images
     runs-on: ubuntu-latest
     env:
