@@ -57,3 +57,4 @@ jobs:
           git add k8s/overlays/dev/kustomization.yaml
           git commit -m "Update dev image tags to ${COMMIT_SHA}"
           git push
+
