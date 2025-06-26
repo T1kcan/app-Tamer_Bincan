@@ -5,24 +5,19 @@ on:
     branches:
       - master
       - dev
-env:
-  COMMIT_SHA: ${{ github.sha }}
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/vote:dev-${COMMIT_SHA}
-  RESULT_IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/result:dev-${COMMIT_SHA}
-
-jobs:
-  MyJob:
-    steps:
-    - name: Convert to lowercase
-      id: convert2lowercase
-      run: INPUT=${{ github.repository_owner }}; echo "VAR_LOWERCASE=${INPUT,,}">>${GITHUB_OUTPUT}
-    - run: echo ${{steps.convert2lowercase.outputs.VAR_LOWERCASE}}
 
   build-push:
     runs-on: ubuntu-latest
     env:
       COMMIT_SHA: ${{ github.sha }}
     steps:
+      - name: Convert to lowercase
+        id: convert2lowercase
+        run: INPUT=${{ github.repository_owner }}; echo "VAR_LOWERCASE=${INPUT,,}">>${GITHUB_OUTPUT}
+      - run: echo ${{steps.convert2lowercase.outputs.VAR_LOWERCASE}}
+      - name: Print commit SHA
+        run: echo "Commit SHA is ${{ env.COMMIT_SHA }}" 
+
       - name: Checkout
         uses: actions/checkout@v3
 
