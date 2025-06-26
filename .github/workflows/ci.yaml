@@ -28,7 +28,7 @@ jobs:
           docker build -t ghcr.io/t1kcan/vote:dev-${COMMIT_SHA} ./vote
           docker push ghcr.io/t1kcan/vote:dev-${COMMIT_SHA}
 
-          docker build -t ghcr.io/$t1kcan/result:dev-${COMMIT_SHA} ./result
+          docker build -t ghcr.io/t1kcan/result:dev-${COMMIT_SHA} ./result
           docker push ghcr.io/t1kcan/result:dev-${COMMIT_SHA}
 
       - name: Update Kustomize image tags
