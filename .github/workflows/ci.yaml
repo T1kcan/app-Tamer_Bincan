@@ -6,7 +6,9 @@ on:
       - master
       - dev
 
-  img-build-push:
+  jobs:
+  build-push:
+    name: Build and Push Docker Images
     runs-on: ubuntu-latest
     env:
       COMMIT_SHA: ${{ github.sha }}
