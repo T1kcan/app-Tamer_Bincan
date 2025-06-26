@@ -6,7 +6,7 @@ on:
       - master
       - dev
 
-  build-push:
+  img-build-push:
     runs-on: ubuntu-latest
     env:
       COMMIT_SHA: ${{ github.sha }}
