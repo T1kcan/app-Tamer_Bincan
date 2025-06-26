@@ -5,6 +5,6 @@ resources:
 
 images:
   - name: ghcr.io/T1kcan/vote
-    newTag: dev-fc3bb58a6602661db3091f74926c2a4395f059db
+    newTag: dev-b44a0534c473233668331abaabc029ee36932659
   - name: ghcr.io/T1kcan/result
-    newTag: dev-fc3bb58a6602661db3091f74926c2a4395f059db
+    newTag: dev-b44a0534c473233668331abaabc029ee36932659
