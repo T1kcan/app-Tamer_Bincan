@@ -7,6 +7,21 @@ on:
       - dev
 
 jobs:
+  sast:
+    name: Static Code Analysis (CodeQL)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+                
   push-images:
     name: Build and Push Docker Images
     runs-on: ubuntu-latest
