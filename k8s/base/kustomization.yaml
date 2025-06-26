@@ -1,6 +1,15 @@
 resources:
-  - vote-deployment.yaml
-  - result-deployment.yaml
+  - db-deployment.yaml  
+  - kustomization.yaml     
+  - redis-service.yaml      
+  - result-service.yaml   
+  - vote-service.yaml
+  - db-service.yaml     
+  - redis-deployment.yaml  
+  - result-deployment.yaml  
+  - vote-deployment.yaml  
+  - worker-deployment.yaml
+
 
 images:
   - name: ghcr.io/T1kcan/vote
