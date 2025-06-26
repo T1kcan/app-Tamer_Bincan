@@ -1,0 +1,10 @@
+namespace: prod
+resources:
+  - ../../base
+  - namespace.yaml
+
+images:
+  - name: ghcr.io/T1kcan/vote
+    newTag: prod-<commit_sha>
+  - name: ghcr.io/T1kcan/result
+    newTag: prod-<commit_sha>

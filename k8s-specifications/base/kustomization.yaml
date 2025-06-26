@@ -1,0 +1,9 @@
+resources:
+  - vote-deployment.yaml
+  - result-deployment.yaml
+
+images:
+  - name: ghcr.io/T1kcan/vote
+    newTag: latest
+  - name: ghcr.io/T1kcan/result
+    newTag: latest

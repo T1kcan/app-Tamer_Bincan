@@ -1,0 +1,10 @@
+namespace: dev
+resources:
+  - ../../base
+  - namespace.yaml
+
+images:
+  - name: ghcr.io/T1kcan/vote
+    newTag: dev-<commit_sha>
+  - name: ghcr.io/T1kcan/result
+    newTag: dev-<commit_sha>
