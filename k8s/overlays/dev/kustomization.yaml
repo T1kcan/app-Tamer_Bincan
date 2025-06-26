@@ -4,7 +4,7 @@ resources:
   - namespace.yaml
 
 images:
-  - name: ghcr.io/T1kcan/vote
+  - name: ghcr.io/t1kcan/vote
     newTag: dev-2f161b3f45db45c3293149c44b9171e5bc6d1350
-  - name: ghcr.io/T1kcan/result
+  - name: ghcr.io/t1kcan/result
     newTag: dev-2f161b3f45db45c3293149c44b9171e5bc6d1350

@@ -4,7 +4,7 @@ resources:
   - namespace.yaml
 
 images:
-  - name: ghcr.io/T1kcan/vote
+  - name: ghcr.io/t1kcan/vote
     newTag: prod-<commit_sha>
-  - name: ghcr.io/T1kcan/result
+  - name: ghcr.io/t1kcan/result
     newTag: prod-<commit_sha>
