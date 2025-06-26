@@ -1,6 +1,5 @@
 resources:
-  - db-deployment.yaml  
-  - kustomization.yaml     
+  - db-deployment.yaml     
   - redis-service.yaml      
   - result-service.yaml   
   - vote-service.yaml
